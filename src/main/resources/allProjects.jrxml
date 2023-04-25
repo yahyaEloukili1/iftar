@@ -38,7 +38,7 @@
 				<textElement>
 					<font size="16" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Liste des projets PDI - Région Laayoune Sakia Elhamra]]></text>
+				<text><![CDATA[Liste des bénificiaires- Région Laayoune Sakia Elhamra]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="140" y="17" width="140" height="50" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="bf4531be-34d6-40fd-8e08-9266230c9599"/>
@@ -56,6 +56,10 @@ Région de Laayoune]]></text>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="50" y="10" width="70" height="58" uuid="15261a8a-6b4b-4375-b0f9-083d09e05098"/>
+				<imageExpression><![CDATA["logo-removebg-preview (1).png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -192,8 +196,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
@@ -210,8 +214,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fiche}]]></textFieldExpression>
@@ -228,8 +232,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{annexeName}]]></textFieldExpression>
@@ -246,8 +250,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{districtName}]]></textFieldExpression>
@@ -264,8 +268,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{categorieName}]]></textFieldExpression>
@@ -282,8 +286,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
@@ -300,8 +304,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="55"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cin}]]></textFieldExpression>
@@ -318,8 +322,8 @@ Région de Laayoune]]></text>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement>
-					<font size="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="arial1" size="12"/>
 					<paragraph leftIndent="5" spacingBefore="5" spacingAfter="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
