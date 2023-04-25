@@ -76,7 +76,13 @@ public class CatalogueApplication implements CommandLineRunner {
 			accountService.saveRole(new AppRole(null,"USER"));
 			accountService.addRoleToUser("iftar","ADMIN");
 			accountService.addRoleToUser("iftar","USER");
+		
+
 		}
+		District d = new District("1er dstrcit urbain");
+		districtRepository.save(d);
+		Annexe a = new Annexe("AAL1",d);
+		annexeRepository.save(a);
 
 	}
 

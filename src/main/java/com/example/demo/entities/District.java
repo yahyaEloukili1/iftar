@@ -46,9 +46,6 @@ public class District {
 		this.designation = designation;
 	}
 
-	public List<Annexe> getAnnexes() {
-		return annexes;
-	}
 
 	public void setAnnexes(List<Annexe> annexes) {
 		this.annexes = annexes;

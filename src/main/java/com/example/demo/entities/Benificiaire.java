@@ -14,7 +14,7 @@ public class Benificiaire {
 	private int id;
 	private String cin;
 	private String nom;
-	private String prenom;
+
 	private String address;
 	@ManyToOne()
 	private Categorie categorie;
@@ -22,22 +22,67 @@ public class Benificiaire {
 	private Annexe annexe;
 	@ManyToOne
 	private District district;
+	private String annexeName;
+	private String districtName;
+	private String categorieName;
+	
+	private String fiche;
 	public Benificiaire() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Benificiaire(String cin, String nom, String prenom, String address, Categorie categorie, Annexe annexe,
-			District district) {
+	
+
+	public String getAnnexeName() {
+		return annexeName;
+	}
+
+
+
+	public void setAnnexeName(String annexeName) {
+		this.annexeName = annexeName;
+	}
+
+
+
+	public String getDistrictName() {
+		return districtName;
+	}
+
+
+
+	public void setDistrictName(String districtName) {
+		this.districtName = districtName;
+	}
+
+
+
+	public String getCategorieName() {
+		return categorieName;
+	}
+
+
+
+	public void setCategorieName(String categorieName) {
+		this.categorieName = categorieName;
+	}
+
+
+
+	public Benificiaire(String cin, String nom, String address, Categorie categorie, Annexe annexe, District district,
+			String fiche) {
 		super();
 		this.cin = cin;
 		this.nom = nom;
-		this.prenom = prenom;
 		this.address = address;
 		this.categorie = categorie;
 		this.annexe = annexe;
 		this.district = district;
+		this.fiche = fiche;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -57,12 +102,7 @@ public class Benificiaire {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public String getPrenom() {
-		return prenom;
-	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+
 	public String getAddress() {
 		return address;
 	}
@@ -74,6 +114,42 @@ public class Benificiaire {
 	}
 	public void setCategorie(Categorie categorie) {
 		this.categorie = categorie;
+	}
+
+
+
+	public Annexe getAnnexe() {
+		return annexe;
+	}
+
+
+
+	public void setAnnexe(Annexe annexe) {
+		this.annexe = annexe;
+	}
+
+
+
+	public District getDistrict() {
+		return district;
+	}
+
+
+
+	public void setDistrict(District district) {
+		this.district = district;
+	}
+
+
+
+	public String getFiche() {
+		return fiche;
+	}
+
+
+
+	public void setFiche(String fiche) {
+		this.fiche = fiche;
 	}
 	
 }

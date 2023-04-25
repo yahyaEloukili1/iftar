@@ -19,7 +19,7 @@ public class Annexe {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Annexe(int id, String designation ,District distric) {
+	public Annexe(String designation ,District distric) {
 		super();
 		
 		this.designation = designation;

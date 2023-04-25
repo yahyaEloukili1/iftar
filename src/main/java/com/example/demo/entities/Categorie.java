@@ -37,9 +37,7 @@ public class Categorie {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
-	public List<Benificiaire> getBenificiares() {
-		return benificiares;
-	}
+
 	public void setBenificiares(List<Benificiaire> benificiares) {
 		this.benificiares = benificiares;
 	}
