@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Benificiaire {
+public class Benificiaire2 {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class Benificiaire {
 	private String categorieName;
 	
 	private String fiche;
-	public Benificiaire() {
+	public Benificiaire2() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -82,7 +82,7 @@ public class Benificiaire {
 
 
 
-	public Benificiaire(String cin, String nom, String address, Categorie categorie, Annexe annexe, District district,
+	public Benificiaire2(String cin, String nom, String address, Categorie categorie, Annexe annexe, District district,
 			String fiche) {
 		super();
 		this.cin = cin;

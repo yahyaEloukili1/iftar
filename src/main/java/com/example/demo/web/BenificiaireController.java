@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.example.demo.dao.AnnexeRepository;
 import com.example.demo.dao.BenificiaireRepository;
+import com.example.demo.dao.BenificiaireRepository2;
 import com.example.demo.entities.Annexe;
 import com.example.demo.entities.Benificiaire;
 import com.example.demo.services.ReportService;
@@ -34,6 +35,8 @@ public class BenificiaireController {
 
 	@Autowired
 	BenificiaireRepository ficheRepository;
+	@Autowired
+	BenificiaireRepository2 ficheRepository2;
 
 	@Autowired
 	AnnexeRepository annexeRepository;
@@ -48,6 +51,10 @@ public class BenificiaireController {
 	@GetMapping("/all")
 	public List<Benificiaire> getAllBenificiaires(){
 		return ficheRepository.findAll();
+	}
+	@GetMapping("/allAAL")
+	public List<Annexe> getAllAAL(){
+		return annexeRepository.findAll();
 	}
 
 	
@@ -68,6 +75,9 @@ public class BenificiaireController {
 	    List<Annexe> benificiaires = annexeRepository.findAll();
 	    return benificiaires;
 	  }
+	  
+	  
+	  
 	@GetMapping("/report/{format}")
 	public void generateReport(@PathVariable String format, HttpServletResponse response) throws JRException, IOException {
 	    reportService.exportReport(format, "C:\\allProjects.jrxml", response);
