@@ -14,7 +14,7 @@ public class Benificiaire {
 	private int id;
 	private String cin;
 	private String nom;
-
+	private String identifiant;
 	private String address;
 	@ManyToOne()
 	private Categorie categorie;
@@ -31,8 +31,23 @@ public class Benificiaire {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 
 	
+
+	public String getIdentifiant() {
+		return identifiant;
+	}
+
+
+
+
+	public void setIdentifiant(String identifiant) {
+		this.identifiant = identifiant;
+	}
+
+
+
 
 	public String getAnnexeName() {
 		return annexeName;

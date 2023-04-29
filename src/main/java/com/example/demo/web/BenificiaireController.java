@@ -50,6 +50,11 @@ public class BenificiaireController {
 		return ficheRepository.findAll();
 	}
 
+	@GetMapping("/allAAL")
+	public List<Annexe> getAllBenificiaires2(){
+		return annexeRepository.findAll();
+	}
+
 	
 	@GetMapping("/benif")
 	public List<Benificiaire> getBenificiairesGroupedByCin() {
