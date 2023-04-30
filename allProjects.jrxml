@@ -38,7 +38,7 @@
 				<textElement>
 					<font size="16" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Liste des bénificiaires- Région Laayoune Sakia Elhamra]]></text>
+				<text><![CDATA[Liste des Bénificiaires- Région Laayoune Sakia Elhamra]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="140" y="17" width="140" height="50" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="bf4531be-34d6-40fd-8e08-9266230c9599"/>

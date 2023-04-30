@@ -6,12 +6,13 @@ import org.springframework.data.rest.core.config.Projection;
 
 import com.example.demo.entities.Annexe;
 import com.example.demo.entities.Benificiaire;
+import com.example.demo.entities.BenificiaireArchive;
 import com.example.demo.entities.Categorie;
 import com.example.demo.entities.District;
 
 
-@Projection(name = "inlinePartie3", types = { Benificiaire.class })
-public interface BenificiaireProjection {
+@Projection(name = "inlinePartie3", types = { BenificiaireArchive.class })
+public interface BenificiaireProjection2 {
 
 	int getId();
 	String getNom();

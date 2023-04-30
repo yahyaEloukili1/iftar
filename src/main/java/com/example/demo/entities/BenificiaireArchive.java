@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Benificiaire {
+public class BenificiaireArchive {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,30 +15,6 @@ public class Benificiaire {
 	private String cin;
 	private String nom;
 	private String identifiant;
-
-	
-
-
-
-	
-
-
-
-	public String getIdentifiant() {
-		return identifiant;
-	}
-
-
-
-
-
-
-	public void setIdentifiant(String identifiant) {
-		this.identifiant = identifiant;
-	}
-
-
-
 	private String address;
 	@ManyToOne()
 	private Categorie categorie;
@@ -51,13 +27,18 @@ public class Benificiaire {
 	private String categorieName;
 	
 	private String fiche;
-	public Benificiaire() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
 
 	
+
+	public String getIdentifiant() {
+		return identifiant;
+	}
+
+
+
+	public void setIdentifiant(String identifiant) {
+		this.identifiant = identifiant;
+	}
 
 
 
@@ -97,16 +78,30 @@ public class Benificiaire {
 
 
 
-	public Benificiaire(String cin, String nom, String address, Categorie categorie, Annexe annexe, District district,
+
+	public BenificiaireArchive(int id, String cin, String nom, String identifiant, String address, Categorie categorie,
+			Annexe annexe, District district, String annexeName, String districtName, String categorieName,
 			String fiche) {
 		super();
+		this.id = id;
 		this.cin = cin;
 		this.nom = nom;
+		this.identifiant = identifiant;
 		this.address = address;
 		this.categorie = categorie;
 		this.annexe = annexe;
 		this.district = district;
+		this.annexeName = annexeName;
+		this.districtName = districtName;
+		this.categorieName = categorieName;
 		this.fiche = fiche;
+	}
+
+
+
+	public BenificiaireArchive() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 

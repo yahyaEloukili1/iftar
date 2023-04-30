@@ -3,7 +3,9 @@ package com.example.demo.web;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -22,6 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.example.demo.dao.AnnexeRepository;
 import com.example.demo.dao.BenificiaireRepository;
+import com.example.demo.dao.BenificiaireRepository2;
 import com.example.demo.entities.Annexe;
 import com.example.demo.entities.Benificiaire;
 import com.example.demo.services.ReportService;
@@ -34,6 +37,8 @@ public class BenificiaireController {
 
 	@Autowired
 	BenificiaireRepository ficheRepository;
+	@Autowired
+	BenificiaireRepository2 ficheRepository2;
 
 	@Autowired
 	AnnexeRepository annexeRepository;
@@ -49,33 +54,44 @@ public class BenificiaireController {
 	public List<Benificiaire> getAllBenificiaires(){
 		return ficheRepository.findAll();
 	}
-
 	@GetMapping("/allAAL")
-	public List<Annexe> getAllBenificiaires2(){
+	public List<Annexe> getAllAAL(){
 		return annexeRepository.findAll();
 	}
 
 	
-	@GetMapping("/benif")
+	@GetMapping("/doublons")
 	public List<Benificiaire> getBenificiairesGroupedByCin() {
 	    List<Benificiaire> benificiaires = ficheRepository.findAll();
 	    Map<String, List<Benificiaire>> groupedByCin = benificiaires.stream()
-	        .collect(Collectors.groupingBy(Benificiaire::getCin));
+	            .collect(Collectors.groupingBy(b -> b.getCin().trim().toLowerCase()));
+
+
+
+
+
+
 	    return groupedByCin.values().stream()
 	        .filter(list -> list.size() > 1)
 	        .flatMap(List::stream)
 	        .collect(Collectors.toList());
 	}
 
-
 	  @GetMapping("/benif2")
 	  public  List<Annexe> getBenificiairesGroupedByCin2() {
 	    List<Annexe> benificiaires = annexeRepository.findAll();
 	    return benificiaires;
 	  }
+	  
+	  
+	  
 	@GetMapping("/report/{format}")
 	public void generateReport(@PathVariable String format, HttpServletResponse response) throws JRException, IOException {
 	    reportService.exportReport(format, "C:\\allProjects.jrxml", response);
+	}
+	@GetMapping("/reportArchive/{format}")
+	public void generateReportArchive(@PathVariable String format, HttpServletResponse response) throws JRException, IOException {
+	    reportService.exportReportArchive(format, "C:\\allProjects.jrxml", response);
 	}
 
 	@GetMapping("/report2/{format}")
