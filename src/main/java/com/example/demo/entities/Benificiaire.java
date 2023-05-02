@@ -15,30 +15,6 @@ public class Benificiaire {
 	private String cin;
 	private String nom;
 	private String identifiant;
-
-	
-
-
-
-	
-
-
-
-	public String getIdentifiant() {
-		return identifiant;
-	}
-
-
-
-
-
-
-	public void setIdentifiant(String identifiant) {
-		this.identifiant = identifiant;
-	}
-
-
-
 	private String address;
 	@ManyToOne()
 	private Categorie categorie;
@@ -51,6 +27,18 @@ public class Benificiaire {
 	private String categorieName;
 	
 	private String fiche;
+	
+	public String getIdentifiant() {
+		return identifiant;
+	}
+
+
+	public void setIdentifiant(String identifiant) {
+		this.identifiant = identifiant;
+	}
+
+
+
 	public Benificiaire() {
 		super();
 		// TODO Auto-generated constructor stub

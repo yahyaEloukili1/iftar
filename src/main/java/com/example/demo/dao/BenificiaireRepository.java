@@ -9,6 +9,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.example.demo.entities.Annexe;
 import com.example.demo.entities.Benificiaire;
 import com.example.demo.entities.Categorie;
 import com.example.demo.projections.AnnexeProjection;
@@ -23,6 +24,7 @@ public interface BenificiaireRepository extends JpaRepository<Benificiaire, Inte
 	
 	List<Benificiaire> findByCinIgnoreCase(String cin);
 
+	List<Benificiaire> findByAnnexeId(Integer id );
 
 
 

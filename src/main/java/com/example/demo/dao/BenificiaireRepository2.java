@@ -25,6 +25,6 @@ public interface BenificiaireRepository2 extends JpaRepository<BenificiaireArchi
 	List<Object[]> findByCinGrouped();
 	List<BenificiaireArchive> findByCinIgnoreCase(String cin);
 
-
+	List<BenificiaireArchive> findByAnnexeId(Integer id );
 
 }

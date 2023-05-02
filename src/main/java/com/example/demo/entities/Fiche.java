@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Categorie {
+public class Fiche {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,13 +17,16 @@ public class Categorie {
 	private String designation;
 	@OneToMany(mappedBy = "categorie")
 	private List<Benificiaire> benificiares;
-	public Categorie() {
+
+	public Fiche(int id, String designation, List<Benificiaire> benificiares) {
+		super();
+		this.id = id;
+		this.designation = designation;
+		this.benificiares = benificiares;
+	}
+	public Fiche() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public Categorie(String designation) {
-		super();
-		this.designation = designation;
 	}
 	public int getId() {
 		return id;
@@ -38,7 +41,6 @@ public class Categorie {
 		this.designation = designation;
 	}
 
-	
 	
 	
 }
